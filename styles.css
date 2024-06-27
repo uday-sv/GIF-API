@@ -1,0 +1,130 @@
+body {
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transition: background-color 0.5s;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    background-color: #FFFACD;
+    padding: 15px 30px;
+    border: 4px solid #FFD700;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    position: relative;
+}
+
+h1::before, h1::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 4px solid #FFD700;
+}
+
+h1::before {
+    top: -4px;
+    left: -4px;
+    border-right: none;
+    border-bottom: none;
+    border-top-left-radius: 15px;
+}
+
+h1::after {
+    bottom: -4px;
+    right: -4px;
+    border-left: none;
+    border-top: none;
+    border-bottom-right-radius: 15px;
+}
+
+#input {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#wordInput {
+    padding: 10px 40px 10px 10px;
+    font-size: 1.2em;
+    border: 2px solid #4CAF50;
+    border-radius: 25px;
+    outline: none;
+    width: 250px;
+    transition: border-color 0.3s;
+}
+
+#wordInput:focus {
+    border-color: #45a049;
+}
+
+#inputEmoji {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#output {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+}
+
+.letter {
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.letter:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+}
+
+.github-link {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 100px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 0.7em;
+}
+
+.github-link:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
